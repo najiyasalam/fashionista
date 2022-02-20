@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <h4 class="logo">FASHIONISTA</h4>
+          <h1 class="main">FASHI<span style="color: white;">ONI</span>STA</h1>
+          <img src="rise.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <h4 class="logo">FASHIONISTA</h4>
+          <h1 style="color:white" class="main">FASHIONISTA</h1>
+          <img src="drop.jpg" style="width:100%">      
+        </div>
+        
+        <div class="mySlides fade">
+          <h4 class="logo">FASHIONISTA</h4>
+          <h1 style="color:white" class="main"><span style="color: black;">FAS</span>HIONISTA</span></h1>
+          <img src="ospan.jpg" style="width:100%">
+        </div>
+        
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        
+        <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 5000); // Change image every 3 seconds
+        }
+        </script>
+        
+        </body>
+
+
+
+</html>
